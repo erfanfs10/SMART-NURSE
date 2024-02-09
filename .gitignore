@@ -1,0 +1,8 @@
+*.pyc
+.vscode/
+.idea/
+media/avatars/
+*.sqlite3
+*.db
+__pycache__/
+*.log
