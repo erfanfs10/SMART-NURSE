@@ -67,8 +67,12 @@ WSGI_APPLICATION = 'smart_nurse.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'fifo',
+        'USER': 'fifouser',
+        'PASSWORD': 'fifopassword',
+        'HOST': 'localhost',
+        'PORT': '5432',
     }
 }
 
@@ -127,8 +131,7 @@ MEDIA_ROOT = BASE_DIR / 'media'
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
-
-#AUTH_USER_MODEL = "users.User"
+AUTH_USER_MODEL = "users.User"
 
 INTERNAL_IPS = ["127.0.0.1"]
 
